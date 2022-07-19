@@ -8,7 +8,7 @@ body {
   height: 100vh;
 }
 
-header {
+.side-header {
   position: fixed;
   left: 0;
   top: 0;
@@ -16,10 +16,12 @@ header {
   height: 100vh;
   background-color: $white;
   color: $red;
+  font-weight: 300;
   h1 {
     width: 200px;
     height: 200px;
     font-size: 70px;
+    font-weight: 400;
     margin: 70px 50px 80px 50px;
     text-transform: uppercase;
   }
@@ -65,10 +67,82 @@ header {
 
 main {
   margin-left: 600px;
-  height: 100%;
+  height: 100vh;
   background-color: $red;
-  header {
+  height: 200vh;
+  .main__top {
+    background-color: $red;
+    opacity: 0.95;
+    position: fixed;
+    width: 840px;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    font-weight: 300;
     color: white;
-    margin: 30px 40px;
+    padding: 50px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    span,
+    a {
+      margin-right: 5px;
+    }
+    a {
+      color: #8b2119;
+      padding-bottom: 3px;
+      text-decoration: none;
+      border-bottom: 1px solid #8b2119;
+    }
+    a:hover {
+      color: white;
+    }
+  }
+}
+
+.main__content {
+  margin: 180px 70px 0px 70px;
+  color: white;
+  .main__content-header {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 55px;
+      font-weight: 600;
+    }
+    .header__author {
+      width: 60%;
+      font-weight: 300;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-content: flex-end;
+    }
+  }
+  .main__content-image {
+    .image__entryNumber {
+      position: relative;
+      top: 60px;
+      left: -10px;
+      background-color: $buttonRed;
+      width: 60px;
+      height: 40px;
+      font-size: 24px;
+      font-weight: 300;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $deepRed;
+    }
+    .image__entryNumber div:first-child {
+      font-size: 12px;
+      margin-right: 3px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
