@@ -2,8 +2,10 @@ import gulp from "gulp";
 import del from "del";
 import minify from "gulp-csso";
 import autoprefixer from "gulp-autoprefixer";
+import sass from "gulp-sass";
+sass.compiler = require("node-sass");
 
-const sass = require("gulp-sass")(require("sass"));
+// const sass = require("gulp-sass")(require("sass"));
 
 const routes = {
   css: {
