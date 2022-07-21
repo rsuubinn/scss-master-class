@@ -267,7 +267,7 @@ header {
 }
 
 .sixth {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -314,6 +314,7 @@ header {
 }
 
 .seventh {
+  margin-bottom: 100px;
   padding: 0px 100px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -324,6 +325,23 @@ header {
     height: 100%;
     &:hover {
       opacity: 0.5;
+    }
+  }
+}
+
+.eighth {
+  padding: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  span {
+    font-family: serif;
+    font-size: 40px;
+    &:last-child {
+      cursor: pointer;
+      margin-left: 15px;
+      color: gray;
     }
   }
 }
