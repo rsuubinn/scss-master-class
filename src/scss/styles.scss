@@ -170,11 +170,61 @@ header {
 }
 
 .fourth {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  margin-bottom: 40px;
+  .fourth__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $black;
+    & > div:first-child {
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 300;
+      margin-bottom: 40px;
+    }
+    & > div:last-child {
+      font-size: 32px;
+      font-family: serif;
+    }
+  }
+  .fourth__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr) auto;
+    justify-items: center;
+    padding: 0px 100px;
+  }
   img {
     width: 100%;
     height: 100%;
+  }
+  span {
+    color: $black;
+  }
+  .fourth__content__category,
+  .fourth__content__price {
+    font-weight: 300;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .fourth__content__name {
+    font-family: serif;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .fourth__content__button {
+    text-transform: uppercase;
+    border: 1px solid $black;
+    margin-top: 20px;
+    padding: 10px 40px;
+    font-weight: 300;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      background-color: $black;
+      color: white;
+    }
   }
 }
