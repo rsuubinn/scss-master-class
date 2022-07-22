@@ -1,0 +1,87 @@
+@import "_variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1fr;
+  grid-template-rows: 0.5fr 5fr 0.5fr;
+  grid-template-areas:
+    "logo emptybox menu"
+    "homeLeft main homeRight"
+    "emptybox news emptybox";
+  & > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .homeLeft,
+  .homeRight {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    place-items: center;
+    & > div {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    & > div:hover {
+      background-color: $brown;
+      color: white;
+    }
+  }
+  .menu {
+    cursor: pointer;
+    &:hover {
+      background-color: $brown;
+      color: white;
+    }
+  }
+}
+
+.logo,
+.left_emptybox {
+  border-right: 1px solid $brown;
+}
+
+.left_emptybox,
+.right_emptybox,
+.news,
+.main {
+  border-top: 1px solid $brown;
+}
+
+.menu,
+.right_emptybox {
+  border-left: 1px solid $brown;
+}
+.homeLeft > div {
+  border-right: 1px solid $brown;
+  border-top: 1px solid $brown;
+}
+.homeRight > div {
+  border-left: 1px solid $brown;
+  border-top: 1px solid $brown;
+}
+
+.logo,
+.menu,
+.homeLeft,
+.homeRight,
+.news {
+  color: $brown;
+  font-size: 20px;
+}
