@@ -150,6 +150,11 @@ header {
       }
     }
     .third__button {
+      &:hover {
+        background-color: $black;
+        color: white;
+      }
+      cursor: pointer;
       padding-left: 30px;
       width: 40vh;
       height: 10vh;
@@ -159,17 +164,15 @@ header {
       border: 1px solid $black;
       font-weight: 300;
       font-size: 14px;
-      a {
-        color: $black;
-        text-transform: uppercase;
-      }
-      button {
+      text-transform: uppercase;
+      .third__button__rarr {
+        padding-top: 23px;
+        font-size: 40px;
+        text-align: center;
         cursor: pointer;
         width: 25%;
         height: 100%;
-        border: none;
         border-left: 1px solid $black;
-        background-color: #f3ede8;
       }
     }
   }
