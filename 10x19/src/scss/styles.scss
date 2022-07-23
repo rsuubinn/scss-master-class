@@ -67,13 +67,10 @@ body {
 }
 
 .main {
-  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/barry-5-768x768.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-.three:hover {
-  background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/3-768x768.jpg");
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .menu,
