@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -26,7 +28,7 @@ header {
       margin-right: 55px;
     }
     & div:last-child {
-      color: #e0e1e2;
+      color: $gray;
     }
     .logo {
       padding: 0px 10px;
@@ -34,25 +36,54 @@ header {
     }
   }
   .header__left:hover {
-    background-color: #e0e1e2;
+    background-color: $gray;
+    span {
+      color: white;
+    }
     .logo {
-      color: black;
+      span {
+        color: black;
+      }
     }
   }
+
+  // .logo:hover {
+  //   color: white;
+  //   .header__left div:last-child {
+  //     color: black;
+  //   }
+  // }
 
   .header__right {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    background-color: aqua;
     span {
       padding: 0px 10px;
+    }
+    & div:first-child span:first-child {
+      margin-right: 60px;
+    }
+    & div:last-child span {
+      position: absolute;
+      right: 0;
+      bottom: 12px;
+      font-size: 12px;
+      margin-right: 10px;
+    }
+    &:hover {
+      background-color: $gray;
     }
   }
   span {
     font-size: 30px;
     font-weight: 600;
+  }
+}
+.header__left div:first-child:hover {
+  span {
+    color: white;
   }
 }
 
