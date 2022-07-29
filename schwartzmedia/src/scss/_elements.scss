@@ -1,0 +1,13 @@
+%button {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 40px;
+  font-weight: 500;
+  border: 1px solid $gray;
+  border-radius: 99px;
+  transition: background-color 0.2s linear;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
