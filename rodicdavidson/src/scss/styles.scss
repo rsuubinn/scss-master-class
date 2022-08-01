@@ -1,0 +1,106 @@
+@import "_variables.scss";
+
+* {
+  box-sizing: border-box;
+  &::selection {
+    background-color: $green;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 7vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  grid-template-rows: 1fr;
+  & > div {
+    display: flex;
+    align-items: center;
+  }
+
+  div:first-child {
+    margin-left: 20px;
+    font-weight: 600;
+    a {
+      text-decoration: none;
+      color: black;
+      &:hover {
+        color: $green;
+        span {
+          color: $green;
+        }
+      }
+    }
+    & span {
+      margin-left: 5px;
+      color: #9d9d9d;
+    }
+  }
+  div:last-child {
+    span {
+      font-weight: 300;
+      margin-right: 20px;
+      cursor: pointer;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 7vh;
+}
+.main__grid {
+  width: 100%;
+  height: 300vh;
+  display: grid;
+  grid-template-columns: 0.7fr 2fr;
+  grid-template-rows: 1fr;
+  .empty {
+    width: 100%;
+    height: 100%;
+  }
+  .contents {
+    margin-right: 20px;
+    margin-bottom: 80px;
+    column-gap: 20px;
+    row-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(12, auto);
+    div {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        margin: 10px 0px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      p {
+        margin: 10px 0px;
+        font-weight: 300;
+        line-height: 1.2em;
+        font-size: 17px;
+        em {
+          color: $green;
+          cursor: pointer;
+        }
+      }
+      span {
+        color: $green;
+        font-weight: 300;
+      }
+    }
+    img {
+      max-width: 100%;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+  }
+}
